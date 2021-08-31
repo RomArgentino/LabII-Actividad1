@@ -63,7 +63,7 @@ public class FuncionesTrigonometricas {
 
         System.out.println("El número PI es: " + Math.PI);
         System.out.println("El número e es: " + Math.E);
-        
+
     }
 
 }
