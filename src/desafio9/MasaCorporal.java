@@ -1,4 +1,4 @@
-package Desafio9;
+package desafio9;
 import java.util.Scanner;
 
 public class MasaCorporal {

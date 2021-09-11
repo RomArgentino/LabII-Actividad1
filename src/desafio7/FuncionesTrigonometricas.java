@@ -1,4 +1,4 @@
-package Desafio7;
+package desafio7;
 import java.util.Scanner;
 
 public class FuncionesTrigonometricas {

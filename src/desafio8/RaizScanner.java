@@ -1,4 +1,4 @@
-package Desafio8;
+package desafio8;
 import java.util.Scanner;
 
 
