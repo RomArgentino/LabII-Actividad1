@@ -1,3 +1,5 @@
+package Commit1;
+
 public class PrimerCommit {
 
     public static void main (String args[]){
@@ -7,8 +9,7 @@ public class PrimerCommit {
         float salario = 20000;
         boolean carnet = true;
 
-        
+
 
     }
-
 }
