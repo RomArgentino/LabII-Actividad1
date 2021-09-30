@@ -25,5 +25,4 @@ class Profesor extends Persona {
     }
 
 
-
 }
