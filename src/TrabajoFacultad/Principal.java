@@ -62,12 +62,13 @@ class Principal {
 
         }
 
+        /* SEGUIR DESDE ESTE PUNTO
         switch (seleccion){
             case 1: Materias materia = new Materias();
+                        materia.agregarEstudiante();
 
-            materia.
         }
-
+*/
 
 
 
