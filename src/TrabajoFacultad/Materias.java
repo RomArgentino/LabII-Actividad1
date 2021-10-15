@@ -12,7 +12,7 @@ class Materias implements Informacion {
     public Materias(String nombre, Profesor titular) {
         this.nombre = nombre;
         this.titular = titular;
-       this.coleccionEstudiante = new HashSet<Estudiante>();
+        this.coleccionEstudiante = new HashSet<Estudiante>();
 
     }
 

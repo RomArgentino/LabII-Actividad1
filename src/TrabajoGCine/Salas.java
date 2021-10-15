@@ -1,25 +1,26 @@
 package TrabajoGCine;
 
+import java.util.ArrayList;
 
-
-import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
-
 
 public class Salas {
 
     private int capacidad;
     private String pelicula;
     private String nombre;
-    private Set<Espectadores> espectadores;
+    private List<Espectadores> espectadores = new ArrayList<Espectadores>() {
+    };
 
     public Salas(int capacidad, String nombre) {
         this.capacidad = capacidad;
         this.nombre = nombre;
-        this.espectadores = new HashSet<Espectadores>();
+        this.espectadores = new ArrayList<Espectadores>();
     }
 
     public void setPelicula(String pelicula) {
+
         this.pelicula = pelicula;
     }
 
@@ -27,6 +28,8 @@ public class Salas {
 
         espectadores.add(newViewer);
     }
+
+
 
 
 

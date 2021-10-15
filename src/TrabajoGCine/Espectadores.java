@@ -2,15 +2,15 @@ package TrabajoGCine;
 
 public class Espectadores extends Persona {
 
-    private String fila;
+    private int fila;
     private int silla;
 
 
-    public String getFila() {
+    public int getFila() {
         return fila;
     }
 
-    public void setFila(String fila) {
+    public void setFila(int fila) {
         this.fila = fila;
     }
 
@@ -22,7 +22,7 @@ public class Espectadores extends Persona {
         this.silla = silla;
     }
 
-    public Espectadores(String nombre, int edad, String fila, int silla) {
+    public Espectadores(String nombre, int edad, int fila, int silla) {
         super(nombre, edad);
         this.silla = silla;
         this.fila = fila;
