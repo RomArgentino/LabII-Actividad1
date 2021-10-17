@@ -9,6 +9,15 @@ public class Empleados extends Persona {
         super(nombre, edad);
     }
 
+    public void datosPersona(String nombre, int edad) {
+
+    }
+
+
+    public void tipoPersona(String tipo) {
+
+    }
+
     public void setSueldo(double sueldo) {
         this.sueldo = sueldo;
     }

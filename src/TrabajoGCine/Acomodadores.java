@@ -9,6 +9,16 @@ public class Acomodadores extends Persona {
         super(nombre, edad);
     }
 
+
+    public void datosPersona(String nombre, int edad) {
+
+    }
+
+
+    public void tipoPersona(String tipo) {
+
+    }
+
     public void setSala(Salas sala) {
         this.sala = sala;
     }

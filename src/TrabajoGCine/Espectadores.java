@@ -32,6 +32,12 @@ public class Espectadores extends Persona {
         super();
 
     }
+    public void datosPersona(String nombre, int edad) {
+
+    }
+    public void tipoPersona(String tipo) {
+
+    }
     //---ver---
     public String getButaca() {
         return null;

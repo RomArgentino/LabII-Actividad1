@@ -15,6 +15,9 @@ abstract class Persona {
 
     }
 
+    public abstract void datosPersona(String nombre, int edad);
+    public abstract void tipoPersona(String tipo);
+
     public String getNombre() {
         return nombre;
     }
