@@ -29,16 +29,45 @@ public class Salas {
         espectadores.add(newViewer);
     }
 
-
-
-
-
-    public String toString() {
-        return "Sala: " + nombre + "\n"+
-                "Capacidad: " + capacidad + "\n"+
-                "Pelicula: " + pelicula + "\n"+
-                "Espectadores: \n" + espectadores;
+    public int getCapacidad() {
+        return capacidad;
     }
 
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
+    }
 
+    public String getPelicula() {
+        return pelicula;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public List<Espectadores> getEspectadores() {
+        return espectadores;
+    }
+
+    public void setEspectadores(List<Espectadores> espectadores) {
+        this.espectadores = espectadores;
+    }
+
+    public String toString() {
+        if(espectadores.size()==0) {
+            return "Sala: " + nombre + ".\n"+
+                    "Capacidad: " + capacidad +" personas.\n"+
+                    "Pelicula: " + pelicula+".";
+        } else {
+            return
+                    "Sala: " + nombre + ".\n"+
+                    "Capacidad: " + capacidad + " personas.\n"+
+                    "Pelicula: " + pelicula + ".\n"+
+                    "Espectadores: ";
+        }
+    }
 }

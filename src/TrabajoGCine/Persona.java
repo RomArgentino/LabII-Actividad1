@@ -6,9 +6,10 @@ abstract class Persona {
     private int edad;
     private String tipo;
 
-    public Persona(String nombre, int edad) {
+    public Persona(String nombre, int edad, String tipo) {
         this.nombre = nombre;
         this.edad = edad;
+        this.tipo = tipo;
     }
 
     public Persona() {
@@ -36,13 +37,15 @@ abstract class Persona {
 
     public String getTipo(){
         return tipo;
-
+    }
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     @Override
     public String toString() {
-        return "Nombre: " + nombre + '\n' +
-                "Edad: " + edad +'\n' +
-                "Tipo: " + tipo + '\n';
+        return "Nombre: " + nombre + " - " +
+                "Edad: " + edad +" - " +
+                "Tipo: " + tipo;
     }
 }

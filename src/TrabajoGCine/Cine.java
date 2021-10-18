@@ -9,12 +9,12 @@ Se debe poder listar los espectadores de una sala, pero en caso de que no haya s
 
 El Programa debe por lo menos una clase abstracta Personas de la cual hereden Espectadores y Empleados:
 
+
 La clase Personas deberá tener por lo menos dos método abstractos:
 
 Uno que permitirá ver si la persona es un Espectador, un Acomodador o un Empleado dependiendo de qué clase sea.
 
 Uno que permitirá visualizar todos los datos de la persona.
-
 
 Los Espectadores además de sus datos personales deben estar asignados a una butaca definida por la Fila (una letra) y la Silla (un entero entero).
 
@@ -49,7 +49,6 @@ Crear un Empleado.
 Mostrar los datos del Empleado.
 
 Todas las clases instanciables del programa deben tener los métodos geters, seters para ingresar o visualizar datos necesarios para los procesos solicitados y el método toString que mostrará todos los datos relevantes de la clase. */
-import java.util.List;
 import java.util.Scanner;
 
 public class Cine {
@@ -58,7 +57,9 @@ public class Cine {
 
         int cont = 1;
         int salaUno = 0;
-        int edad, fila, silla;
+        int edad;
+        String fila;
+        int silla;
         String opcion = "";
 
 
@@ -66,13 +67,14 @@ public class Cine {
         Scanner nombre = new Scanner(System.in);
         Scanner numero = new Scanner(System.in);
 
-        Salas sala1 = new Salas(3, "1");
+
+        Salas sala1 = new Salas(3, "01");
+        Acomodadores acomodador = new Acomodadores ("Juan", 32, " Acomodador", 50000);
+        Empleados empleado = new Empleados("Stella", 22," Empleado", 40000);
 
 
 
-
-
-        do {
+    do {
             Espectadores espectador = new Espectadores();
             System.out.println("¿Desea agregar espectadores?");
             System.out.println("1- Si\n0- No");
@@ -86,10 +88,12 @@ public class Cine {
             while (!(opcion.equals("0") || opcion.equals("1"))) {
                 System.out.println("Error. Continuar agregando: 1 - Finalizar: 0");
                 opcion = nombre.nextLine();
-                System.out.println("Error. Ingrese sólo 0 o 1.");
+
             }
 
             if (opcion.equals("0")){
+                sala1.setPelicula("Joker");
+                System.out.println(sala1.toString());
                 System.out.println("SALA SIN ESPECTADORES CARGADOS.");
                 break;
             }
@@ -103,13 +107,15 @@ public class Cine {
             espectador.setEdad(edad);
 
             System.out.println("Fila: ");
-            fila = numero.nextInt();
+            fila = nombre.nextLine();
             espectador.setFila(fila);
 
             System.out.println("Silla: ");
             silla = numero.nextInt();
             espectador.setSilla(silla);
             sala1.agregarEspectador(espectador);
+
+
 
             System.out.println("Continuar agregando: 1 - Finalizar: 0");
             opcion = nombre.nextLine();
@@ -135,9 +141,68 @@ public class Cine {
                 }
         } while (!opcion.equals("0"));
 
-
-        sala1.setPelicula("Venom 2");
+        sala1.setPelicula("Joker");
+        acomodador.setSala(sala1);
         System.out.println(sala1.toString());
+
+        System.out.println("Personal: ");
+        System.out.println(empleado.toString());
+        System.out.println(acomodador.toString());
+
+
+//---------------------Modificar la sala del acomodador-------------------
+        System.out.println("¿Desea la sala del acomodador?");
+        System.out.println("1- Si\n0- No");
+        opcion = nombre.nextLine();
+
+        while (!Utils.isNumeric(opcion)) {
+            System.out.println("Error. Ingresar sólo números. Continuar agregando: 1 - Finalizar: 0");
+            opcion = nombre.nextLine();
+        }
+
+        while (!(opcion.equals("0") || opcion.equals("1"))) {
+            System.out.println("Error. Continuar agregando: 1 - Finalizar: 0");
+            opcion = nombre.nextLine();
+        }
+
+        if (opcion.equals("0")){
+            System.out.println("No se modificaron datos");
+
+        }else{
+            System.out.println("Ingrese la sala acomodador: ");
+            sala1.setNombre(nombre.nextLine());
+            acomodador.setSala(sala1);
+            System.out.println("Ha modificado el sueldo del acomodador, quedando de la siguiente forma: ");
+            System.out.println(acomodador.toString());
+
+        }
+
+//---------------------Modificar el sueldo del acomodador-------------------
+        System.out.println("¿Desea modificar el sueldo del acomodador?");
+        System.out.println("1- Si\n0- No");
+        opcion = nombre.nextLine();
+
+        while (!Utils.isNumeric(opcion)) {
+            System.out.println("Error. Ingresar sólo números. Continuar agregando: 1 - Finalizar: 0");
+            opcion = nombre.nextLine();
+        }
+
+        while (!(opcion.equals("0") || opcion.equals("1"))) {
+            System.out.println("Error. Continuar agregando: 1 - Finalizar: 0");
+            opcion = nombre.nextLine();
+        }
+
+        if (opcion.equals("0")){
+            System.out.println("Gracias por elegirnos.");
+
+        }else{
+            System.out.println("Ingrese el nuevo sueldo acomodador: ");
+            double cheque = numero.nextInt();
+            acomodador.setSueldo(cheque);
+            System.out.println("Ha modificado el sueldo del acomodador, quedando de la siguiente forma: ");
+            System.out.println(acomodador.toString());
+
+        }
 
     }
 }

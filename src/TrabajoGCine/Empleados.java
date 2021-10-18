@@ -5,8 +5,9 @@ public class Empleados extends Persona {
     private double sueldo;
 
 
-    public Empleados(String nombre, int edad) {
-        super(nombre, edad);
+    public Empleados(String nombre, int edad, String tipo, double sueldo) {
+        super(nombre, edad, tipo);
+        this.sueldo = sueldo;
     }
 
     public void datosPersona(String nombre, int edad) {
@@ -22,9 +23,12 @@ public class Empleados extends Persona {
         this.sueldo = sueldo;
     }
 
+    public double getSueldo() {
+        return sueldo;
+    }
 
     public String toString() {
-        return "Empleado: " + "\n" +
+        return "Nombre: " + getNombre() + " - " + "Edad: " +getEdad() +" años - " + "Tipo:" + getTipo() +" - " +
                 "Sueldo: " + sueldo;
     }
 
