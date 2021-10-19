@@ -1,23 +1,24 @@
 package TrabajoFacultad;
 
-import java.util.HashSet;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 class Materias implements Informacion {
 
     public String nombre;
     public Profesor titular;
-    private Set<Estudiante> coleccionEstudiante;
+    private List<Estudiante> coleccionEstudiante = new ArrayList<Estudiante>();
 
-    public Materias(String nombre, Profesor titular) {
+    public Materias(String nombre, Profesor titular1) {
         this.nombre = nombre;
-        this.titular = titular;
-        this.coleccionEstudiante = new HashSet<Estudiante>();
-
+        this.titular = titular1;
     }
 
-    public void agregarEstudiante(Estudiante estudianteNew){
-        coleccionEstudiante.add(estudianteNew);
+    public void agregarEstudiante(Estudiante newEstudiante){
+
+        coleccionEstudiante.add(newEstudiante);
     }
 
     public void eliminarEstudiante (Estudiante estudianteEliminado){
@@ -25,22 +26,27 @@ class Materias implements Informacion {
         coleccionEstudiante.remove(estudianteEliminado);
     }
 
-    @Override
+
     public int verCantidad() {
 
         return coleccionEstudiante.size();
     }
 
-    @Override
     public String listarContenidos() {
+
         return coleccionEstudiante.toString();
     }
 
 
-   /*public void modificarEstudiante (Profesor estudianteModificar){
+   public void modificarEstudiante (Profesor estudianteModificar){
 
-        this.titular = Profesor;
+        this.titular = estudianteModificar;
     }
 
-*/
+
+    public String toString() {
+        return "\n" + nombre +" - "+
+                "Titular: " + titular +" - "+
+                "\nEstudiantes: " + coleccionEstudiante;
+    }
 }

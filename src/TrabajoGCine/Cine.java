@@ -9,7 +9,6 @@ Se debe poder listar los espectadores de una sala, pero en caso de que no haya s
 
 El Programa debe por lo menos una clase abstracta Personas de la cual hereden Espectadores y Empleados:
 
-
 La clase Personas deberá tener por lo menos dos método abstractos:
 
 Uno que permitirá ver si la persona es un Espectador, un Acomodador o un Empleado dependiendo de qué clase sea.
@@ -62,8 +61,6 @@ public class Cine {
         int silla;
         String opcion = "";
 
-
-
         Scanner nombre = new Scanner(System.in);
         Scanner numero = new Scanner(System.in);
 
@@ -71,8 +68,6 @@ public class Cine {
         Salas sala1 = new Salas(3, "01");
         Acomodadores acomodador = new Acomodadores ("Juan", 32, " Acomodador", 50000);
         Empleados empleado = new Empleados("Stella", 22," Empleado", 40000);
-
-
 
     do {
             Espectadores espectador = new Espectadores();
@@ -116,7 +111,6 @@ public class Cine {
             sala1.agregarEspectador(espectador);
 
 
-
             System.out.println("Continuar agregando: 1 - Finalizar: 0");
             opcion = nombre.nextLine();
 
@@ -128,7 +122,7 @@ public class Cine {
                 while (!(opcion.equals("0") || opcion.equals("1"))) {
                     System.out.println("Error. Continuar agregando: 1 - Finalizar: 0");
                     opcion = nombre.nextLine();
-                    System.out.println("Error. Ingrese sólo 0 o 1.");
+
 
                 }
 

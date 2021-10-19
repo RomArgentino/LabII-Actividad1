@@ -15,10 +15,10 @@ abstract class Persona {
 
     public abstract void modificarDatos(String nombre, String apellido, int legajo);
 
-    @Override
+
     public String toString() {
-        return "Nombre: " + nombre + '\n' +
-                "Apellido: " + apellido + '\n' +
+        return   nombre +" - "+
+                "Apellido: " + apellido +" - "+
                 "Legajo: " + Legajo;
     }
 }

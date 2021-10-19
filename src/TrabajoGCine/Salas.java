@@ -10,8 +10,7 @@ public class Salas {
     private int capacidad;
     private String pelicula;
     private String nombre;
-    private List<Espectadores> espectadores = new ArrayList<Espectadores>() {
-    };
+    private List<Espectadores> espectadores = new ArrayList<Espectadores>();
 
     public Salas(int capacidad, String nombre) {
         this.capacidad = capacidad;
