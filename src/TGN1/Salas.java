@@ -1,9 +1,8 @@
-package TrabajoGCine;
+package TGN1;
 
 import java.util.ArrayList;
 
 import java.util.List;
-import java.util.Set;
 
 public class Salas {
 
@@ -66,7 +65,7 @@ public class Salas {
                     "Sala: " + nombre + ".\n"+
                     "Capacidad: " + capacidad + " personas.\n"+
                     "Pelicula: " + pelicula + ".\n"+
-                    "Espectadores: ";
+                    "Espectadores: "+espectadores;
         }
     }
 }

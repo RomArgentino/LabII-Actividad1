@@ -1,4 +1,4 @@
-package TrabajoGCine;
+package TGN1;
 
 public class Empleados extends Persona {
 

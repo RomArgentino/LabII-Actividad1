@@ -1,5 +1,5 @@
 package TrabajoFacultad;
-import TrabajoGCine.Utils;
+import TGN1.Utils;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -114,7 +114,7 @@ class Principal {
                     carrera1.agregarMateria(agregarMateriasUniversidad());
                     carrera1.getMaterillas();
             }
-            
+
 
             System.out.println("Continuar agregando: 1 - Finalizar: 0");
             opcion = letra.nextLine();

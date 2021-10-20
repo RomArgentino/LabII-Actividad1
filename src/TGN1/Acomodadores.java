@@ -1,4 +1,4 @@
-package TrabajoGCine;
+package TGN1;
 
 public class Acomodadores extends Empleados implements paraAcomodadores {
 

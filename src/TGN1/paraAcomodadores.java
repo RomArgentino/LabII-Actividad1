@@ -1,4 +1,4 @@
-package TrabajoGCine;
+package TGN1;
 
 interface paraAcomodadores {
 

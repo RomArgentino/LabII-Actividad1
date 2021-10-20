@@ -1,4 +1,4 @@
-package TrabajoGCine;
+package TGN1;
 
 public class Espectadores extends Persona {
 
