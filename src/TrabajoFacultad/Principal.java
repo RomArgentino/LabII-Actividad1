@@ -8,7 +8,6 @@ class Principal {
     public static void main(String[] args) {
 
         String opcion = "";
-        String deleteCarrera = "";
 
 
         Scanner num = new Scanner(System.in);
@@ -35,6 +34,12 @@ class Principal {
         universidad1.agregarCarrera(carrera1);
         universidad1.agregarCarrera(carrera2);
         universidad1.agregarCarrera(carrera3);
+
+        universidad1.agregarEstudiante(estudiante1);
+        universidad1.agregarEstudiante(estudiante2);
+        universidad1.agregarEstudiante(estudiante3);
+
+
 
         carrera1.agregarMateria(materia1);
         carrera1.agregarMateria(materia2);
@@ -63,204 +68,56 @@ class Principal {
         /*------------Menú de opciones------------*/
 
 
-            System.out.println("***Bienvenido al Programa Universidad***");
+        System.out.println("***Bienvenido al Programa Universidad***");
 
-            System.out.println("Indique en el siguiente menú lo que desea hacer: \n");
+        System.out.println("Indique en el siguiente menú lo que desea hacer: \n");
 
-            System.out.print(
-                    "1. Agregar Carreras a una Facultad. \n" +
-
-                            "2. Eliminar Carreras de la facultad. \n" +
-
-                            "3. Eliminar Estudiantes. \n" +
-
-                            "4. Agregar materias a una Carrera.\n" +
-
-                            "5. Eliminar materias a una Carrera.\n" +
-
-                            "6. Agregar Estudiantes a una Materia.   \n" +
-
-                            "7. Eliminar Estudiante de una Materia. \n" +
-
-                            "8. Modificar el Profesor de la materia.\n" +
-                            "\nOpción elegida: ");
-            int seleccion = num.nextInt();
-
-
-            switch (seleccion) {
-
-                case 1:
-                    universidad1.agregarCarrera(agregarCarrerasUniversidad());
-                    break;
-
-                case 2:
-                    System.out.println("De las siguientes carreras: ");
-                    universidad1.getCarrerillas();
-                    System.out.println("Indique el nombre de la carrera que desea eliminar: ");
-                    opcion = letra.nextLine().toUpperCase(Locale.ROOT);
-                    universidad1.eliminarCarrera(opcion);
-                    universidad1.getCarrerillas();
-
-
-
-
-
-
-                    break;
-
-
-                /*System.out.println("1- Si\n0- No");
-                opcion = nombre.nextLine();
-
-                while (!Utils.isNumeric(opcion)) {
-                    System.out.println("Error. Ingresar sólo números. Continuar agregando: 1 - Finalizar: 0");
-                    opcion = nombre.nextLine();
-                }
-
-                while (!(opcion.equals("0") || opcion.equals("1"))) {
-                    System.out.println("Error. Continuar agregando: 1 - Finalizar: 0");
-                    opcion = nombre.nextLine();
-                }
-
-                if (opcion.equals("0")){
-                    System.out.println("Gracias por elegirnos.");
-
-                }else{
-                    System.out.println("Ingrese el nuevo sueldo acomodador: ");
-                    double cheque = numero.nextInt();
-                    acomodador.setSueldo(cheque);
-                    System.out.println("Ha modificado el sueldo del acomodador, quedando de la siguiente forma: ");
-                    System.out.println(acomodador.toString());
-
-                }
-                System.out.println("Ingrese el nombre de la carrera: ");
-                String nombreCarrera = letra.nextLine();
-                Carreras carrera4 = new Carreras (nombreCarrera);
-                universidad1.agregarCarrera(carrera4);*/
-
-                    /*do while opciones para agregar mas o eliminar - llamar universidad y llamar a método set carreras*/
-                /*Eliminar: llamar universidad y mostrar por pantalla las carreras - recorrer la lista - imprimir lista
-                con índice, que el usuario elija con el número - control de numeros menor a 0 y que no sea letras
-                Modificar: imprimir indice con numeros - que el usuario elija numeros - decir que devuelva lista.get +
-                el numero que agrego el usuario - almacenar el objeto dentro de una instancia y editarlo - carrera-setNombre()*/
-
-
-
-              /*  //desea agregar materias
-                System.out.println("Ingrese el nombre de la carrera: ");
-                String nombreCarrera = letra.nextLine();
-                Carreras carrera4 = new Carreras (nombreCarrera);
-                //desea agregar estudiantes a las materias?*/
-
-
-
-
-            }
-           /* System.out.println("1- Si\n0- No");
-            opcion = letra.nextLine();
-
-            while (Utils.isNumeric(opcion)) {
-                System.out.println("Error. Ingresar sólo números. Continuar agregando: 1 - Finalizar: 0");
-                opcion = letra.nextLine();
-            }
-
-            while (!(opcion.equals("0") || opcion.equals("1"))) {
-                System.out.println("Error. Continuar agregando: 1 - Finalizar: 0");
-                opcion = letra.nextLine();
-
-            }
-
-            if (opcion.equals("0")){
-
-                System.out.println("MATERIA SIN ALUMNOS CARGADOS.");
-                break;
-            }
-            /*System.out.println("Ingrese el nombre del espectador Nº: " + cont);
-            materia1.a(letra.nextLine());
-
-            System.out.println("Edad del espectador: ");
-            edad = num.nextInt();
-            espectador.setEdad(edad);
-
-            System.out.println("Fila: ");
-            fila = letra.nextLine();
-            espectador.setFila(fila);
-
-            System.out.println("Silla: ");
-            silla = num.nextInt();
-            espectador.setSilla(silla);
-            sala1.agregarEspectador(espectador);*/
-
-
-            /*System.out.println("Continuar agregando: 1 - Finalizar: 0");
-            opcion = letra.nextLine();
-
-            while (!Utils.isNumeric(opcion)) {
-                System.out.println("Error. Ingresar sólo números. Continuar agregando: 1 - Finalizar: 0");
-                opcion = letra.nextLine();
-            }
-
-            while (!(opcion.equals("0") || opcion.equals("1"))) {
-                System.out.println("Error. Continuar agregando: 1 - Finalizar: 0");
-                opcion = letra.nextLine();
-                System.out.println("Error. Ingrese sólo 0 o 1.");
-
-            }
-
-            /*cont++;*/
-        /*System.out.print(
+        System.out.print(
                         "1. Agregar Carreras a una Facultad. \n" +
-
                         "2. Eliminar Carreras de la facultad. \n" +
-
                         "3. Eliminar Estudiantes. \n" +
-
                         "4. Agregar materias a una Carrera.\n" +
-
                         "5. Eliminar materias a una Carrera.\n" +
-
                         "6. Agregar Estudiantes a una Materia.   \n" +
-
                         "7. Eliminar Estudiante de una Materia. \n" +
-
                         "8. Modificar el Profesor de la materia.\n" +
+
                         "\nOpción elegida: ");
-            int seleccion = num.nextInt();
 
-        while (seleccion >=1 && seleccion <= 9 ) {
+        String numero = letra.nextLine();
+        int op = controlIngresosMenu(numero);
 
-            System.out.println("Error. Indique en el siguiente menú lo que desea hacer presionando números del 1-10: ");
-            System.out.print(
-                            "1. Agregar Carreras a una Facultad. \n" +
+        switch (op) {
 
-                            "2. Eliminar Carreras de la facultad. \n" +
+            case 1:
+                universidad1.agregarCarrera(agregarCarrerasUniversidad());
+                universidad1.getCarrerillas();
+                break;
 
-                            "3. Eliminar Estudiantes. \n" +
+            case 2:
+                System.out.println("De las siguientes carreras: ");
+                universidad1.getCarrerillas();
+                System.out.println("Indique el nombre de la carrera que desea eliminar: ");
+                opcion = letra.nextLine().toUpperCase(Locale.ROOT);
+                universidad1.eliminarCarrera(controlNombre(opcion));
+                break;
 
-                            "4. Agregar materias a una Carrera.\n" +
+            case 3:
+                System.out.println("De los siguientes estudiantes: ");
+                universidad1.getEstudiantes();
+                System.out.println("Ejila el número correspondiente al estudiante que desea eliminar");
+                opcion = letra.nextLine();
+                Estudiante e = universidad1.getEstudiante(controlIngresosOpcion(opcion));
+                universidad1.eliminarEstudiante(e);
+                universidad1.getEstudiantes();
 
-                            "5. Eliminar materias a una Carrera.\n" +
-
-                            "6. Agregar Estudiantes a una Materia.   \n" +
-
-                            "7. Eliminar Estudiante de una Materia. \n" +
-
-                            "8. Modificar el Profesor de la materia.\n" +
-                            "\nOpción elegida: ");
-            seleccion = num.nextInt();
-
-        }
-
-        /* SEGUIR DESDE ESTE PUNTO
-        switch (seleccion){
-            case 1: Materias materia = new Materias();
-                        materia.agregarEstudiante();
-
-        }
-*/
 
 
         }
+
+
+
+    }
 
 
     public static Carreras agregarCarrerasUniversidad() {
@@ -278,17 +135,88 @@ class Principal {
             System.out.println("Continuar agregando: 1 - Finalizar: 0");
             opcion = letras.nextLine();
 
-                while (!Utils.isNumeric(opcion)) {
-                    System.out.println("Error. Ingresar sólo números. Continuar agregando: 1 - Finalizar: 0");
-                    opcion = letras.nextLine();
-                }
+            while (!Utils.isNumeric(opcion)) {
+                System.out.println("Error. Ingresar sólo números. Continuar agregando: 1 - Finalizar: 0");
+                opcion = letras.nextLine();
+            }
 
-                while (!(opcion.equals("0") || opcion.equals("1"))) {
-                    System.out.println("Error. Continuar agregando: 1 - Finalizar: 0");
-                    opcion = letras.nextLine();
+            while (!(opcion.equals("0") || opcion.equals("1"))) {
+                System.out.println("Error. Continuar agregando: 1 - Finalizar: 0");
+                opcion = letras.nextLine();
 
 
-                }return carrera4;
-            }while (!opcion.equals("0"));
-        }
+            }
+            return carrera4;
+        } while (!opcion.equals("0"));
     }
+
+    public static int controlIngresosMenu(String ingreso) {
+
+        Scanner letras = new Scanner(System.in);
+        Scanner num = new Scanner(System.in);
+        int ingresos;
+
+           while (!Utils.isNumeric(ingreso)) {
+                System.out.println("Error. Ingrese sólo números.");
+                ingreso = letras.nextLine();
+            }
+
+           ingresos = Integer.parseInt(ingreso);
+
+
+        while(!(ingresos > 0 && ingresos <=8)) {
+            System.out.println("Error. Ingrese una de las siguientes opciones. \n" +
+                    "1. Agregar Carreras a una Facultad. \n" +
+                    "2. Eliminar Carreras de la facultad. \n" +
+                    "3. Eliminar Estudiantes. \n" +
+                    "4. Agregar materias a una Carrera.\n" +
+                    "5. Eliminar materias a una Carrera.\n" +
+                    "6. Agregar Estudiantes a una Materia.   \n" +
+                    "7. Eliminar Estudiante de una Materia. \n" +
+                    "8. Modificar el Profesor de la materia.\n" +
+
+                    "\nOpción elegida: ");
+            ingresos = num.nextInt();
+        }
+        return ingresos;
+    }
+
+    public static String controlNombre(String palabra){
+
+        Scanner letras = new Scanner(System.in);
+
+        String palabras="";
+
+        while (Utils.isNumeric(palabra)) {
+            System.out.println("Error. Ingrese caracteres o palabras.");
+            palabra = letras.nextLine();
+        }
+        palabras = palabra;
+
+        return palabras;
+    }
+
+    public static int controlIngresosOpcion(String ingreso) {
+
+        Scanner letras = new Scanner(System.in);
+        Scanner num = new Scanner(System.in);
+        int ingresos;
+
+        while (!Utils.isNumeric(ingreso)) {
+            System.out.println("Error. Ingrese sólo números.");
+            ingreso = letras.nextLine();
+        }
+
+        ingresos = Integer.parseInt(ingreso);
+
+
+        while(ingresos > 3) {
+            System.out.println("Error. Ingrese una de las siguientes opciones con números del 0 al 2. \n" +
+            "\nOpción elegida: ");
+            ingresos = num.nextInt();
+        }
+        return ingresos;
+    }
+
+}
+

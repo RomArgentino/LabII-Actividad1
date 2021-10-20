@@ -43,10 +43,39 @@ class Materias implements Informacion {
         this.titular = estudianteModificar;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Profesor getTitular() {
+        return titular;
+    }
+
+    public void setTitular(Profesor titular) {
+        this.titular = titular;
+    }
+
+    public List<Estudiante> getColeccionEstudiante() {
+        return coleccionEstudiante;
+    }
+
+    public void setColeccionEstudiante(List<Estudiante> coleccionEstudiante) {
+        this.coleccionEstudiante = coleccionEstudiante;
+    }
 
     public String toString() {
         return "\n" + nombre +" - "+
                 "Titular: " + titular +" - "+
                 "\nEstudiantes: " + coleccionEstudiante;
+    }
+
+    public void getEstudiantes(){
+        for (int i = 0; i< coleccionEstudiante.size(); i++){
+            System.out.println(i+": "+coleccionEstudiante.get(i).getNombre());
+        }
     }
 }

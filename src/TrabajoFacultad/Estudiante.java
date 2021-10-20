@@ -8,10 +8,15 @@ class Estudiante extends Persona {
 
     }
 
+    public Estudiante() {
+        super();
+    }
+
 
     public void modificarDatos(String nombre, String apellido, int legajo) {
 
     }
+
 
 
 
