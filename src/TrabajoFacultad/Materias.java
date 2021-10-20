@@ -16,6 +16,11 @@ class Materias implements Informacion {
         this.titular = titular1;
     }
 
+    public Materias(String nombre) {
+        this.nombre = nombre;
+        this.coleccionEstudiante = new ArrayList<Estudiante>();
+    }
+
     public void agregarEstudiante(Estudiante newEstudiante){
 
         coleccionEstudiante.add(newEstudiante);

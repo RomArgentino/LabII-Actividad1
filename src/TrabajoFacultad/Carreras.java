@@ -47,7 +47,11 @@ import java.util.LinkedList;
             return "\nCarreras: " + nombre +
                     "\nMaterias: " + coleccionMaterias;
         }
-
+        public void getMaterillas(){
+            for (int i = 0; i< coleccionMaterias.size(); i++){
+                System.out.println(i+": "+ coleccionMaterias.get(i).getNombre());
+            }
+        }
 
     }
 
