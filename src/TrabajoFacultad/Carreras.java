@@ -35,6 +35,7 @@ import java.util.LinkedList;
         }
 
         public boolean eliminarMateria(String nombreMateria){
+
             return false;
         }
 
@@ -51,6 +52,15 @@ import java.util.LinkedList;
             for (int i = 0; i< coleccionMaterias.size(); i++){
                 System.out.println(i+": "+ coleccionMaterias.get(i).getNombre());
             }
+        }
+
+        public String getUnaMaterilla(String num){
+            String materia = "";
+            for (int i = 0; i< coleccionMaterias.size(); i++){
+                num = coleccionMaterias.get(i).getNombre();
+            }
+            materia = num;
+            return materia;
         }
 
     }

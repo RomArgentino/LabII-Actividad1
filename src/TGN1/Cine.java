@@ -10,8 +10,7 @@ public class Cine {
         int cont = 1;
         int salaUno = 0;
         int edad = 0;
-        String fila;
-        int silla;
+        int silla = 0;
         String opcion = "";
 
         Scanner nombre = new Scanner(System.in);
@@ -52,24 +51,23 @@ public class Cine {
             espectador.setNombre(controlPalabras(nombre.nextLine()));
 
             System.out.println("Edad del espectador: ");
-
                if (controlBooleano()) {
-                   espectador.setEdad(numero.nextInt());
+                   espectador.setEdad(edad);
+
                } else {
                    System.out.println("ERROR EN EL INGRESO DE DATOS. ¡Ingrese número!");
-                   espectador.setEdad(numero.nextInt());
+                   espectador.setEdad(edad);
                }
 
             System.out.println("Fila: ");
             espectador.setFila(controlPalabras(nombre.nextLine()));
 
             System.out.println("Silla: ");
-
             if (controlBooleano()) {
-                espectador.setSilla(numero.nextInt());
+                espectador.setSilla(silla);
             } else {
                 System.out.println("ERROR EN EL INGRESO DE DATOS. ¡Ingrese número!");
-                espectador.setSilla(numero.nextInt());
+                espectador.setSilla(silla);
             }
 
             sala1.agregarEspectador(espectador);

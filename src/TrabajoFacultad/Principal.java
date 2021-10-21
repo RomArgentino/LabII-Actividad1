@@ -75,7 +75,7 @@ class Principal {
                         "2. Eliminar Carreras de la facultad. \n" +
                         "3. Eliminar Estudiantes. \n" +
                         "4. Agregar materias a una Carrera.\n" +
-                        "5. Eliminar materias a una Carrera.\n" +
+                        "5. Eliminar materias de una Carrera.\n" +
                         "6. Agregar Estudiantes a una Materia.   \n" +
                         "7. Eliminar Estudiante de una Materia. \n" +
                         "8. Modificar el Profesor de la materia.\n" +
@@ -113,6 +113,21 @@ class Principal {
                 case 4:
                     carrera1.agregarMateria(agregarMateriasUniversidad());
                     carrera1.getMaterillas();
+
+                case 5:
+
+                    System.out.println("¿Desea eliminar materia?");
+                    int opciones = letra.nextInt();
+
+                    switch(opciones){
+
+                        case 1:
+                            System.out.println("De las siguientes materias: ");
+                            universidad1.getCarrerillas();
+                            System.out.println("Ha seleccionado materia 0:");
+
+
+                    }
             }
 
 
